@@ -1,0 +1,39 @@
+createdAt: "2019-11-23T16:07:12.246Z"
+updatedAt: "2019-11-23T16:10:51.432Z"
+type: "MARKDOWN_NOTE"
+folder: "e8ad85b1fd4d26052f07"
+title: "Number overflows"
+tags: [
+  "JS"
+]
+content: '''
+  ## Number overflows
+  
+  Simple test, when I try this:
+  
+  ```
+  var max = Number.MAX_VALUE;
+  var x = max + 10;
+  
+  var min = Number.MIN_VALUE;
+  var y = min / 10;
+  ```
+  
+  
+  
+  I find that x and max have the same value (in Chrome, IE and Firefox) so it appears that some overflows are just pegged to the max value. And, y gets pegged to 0 so some underflows seem to go to zero.
+  
+  Ahhh, but it is not quite that simple. Not all overflows go to Number.MAX_VALUE and not all underflows go to Number.MIN_VALUE. If you do this:
+  ```
+  var max = Number.MAX_VALUE;
+  var z = max * 2;
+  
+  Then, z will be Infinity.
+  ```
+  It turns out that it depends upon how far you overflow/underflow. If you go too far, you will get INFINITY instead. This is because of the use of IEEE 754 round-to-nearest mode where the max value can be considered nearer than infinity. See Adding to Number.MAX_VALUE for more detail. Per that answer, values of 1.7976931348623158 × 10308 or greater round to infinity. Values between Number.MAX_VALUE and that will round to Number.MAX_VALUE.
+  
+  To, make things even more complicated, there is also something as gradual underflow which Javascript supports. This is where the mantissa of the floating point value has leading zeroes in it. Gradual underflow allows floating point to represent some smaller numbers that it could not represent without that, but they are represented at a reduced precision.
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

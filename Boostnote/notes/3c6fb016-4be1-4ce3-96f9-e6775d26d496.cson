@@ -1,0 +1,15 @@
+createdAt: "2019-12-13T21:15:32.755Z"
+updatedAt: "2019-12-13T21:16:40.632Z"
+type: "MARKDOWN_NOTE"
+folder: "71be7c0f5b824f53e08b"
+title: "Dev Notes"
+tags: []
+content: '''
+  ## Dev Notes
+  
+  [Properly install and configure Nodejs and npm on Ubuntu](https://medium.com/testrq-ewrew/install-and-configure-nodejs-and-npm-properly-on-ubuntu-16837d02ecaa)
+  
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false

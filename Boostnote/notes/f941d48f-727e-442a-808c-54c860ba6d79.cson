@@ -1,0 +1,18 @@
+createdAt: "2019-11-23T16:24:38.736Z"
+updatedAt: "2019-11-23T16:48:00.017Z"
+type: "MARKDOWN_NOTE"
+folder: "e8ad85b1fd4d26052f07"
+title: "Number Conversions"
+tags: [
+  "JS"
+  "Integer_Overflow"
+]
+content: '''
+  ## Number Conversions
+  
+  - Conversion to string, splitting and joining are relatively expensive operations in comparison with simple arithmetic operations
+  - Integer overflow hex: **0x7FFFFFFF**
+'''
+linesHighlighted: []
+isStarred: false
+isTrashed: false
